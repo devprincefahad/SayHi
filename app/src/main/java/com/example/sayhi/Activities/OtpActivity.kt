@@ -109,8 +109,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
                 if (e is FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
                     Log.e("Exception:", "FirebaseAuthInvalidCredentialsException", e)
-                    Log.e("=========:", "FirebaseAuthInvalidCredentialsException " + e.message)
-
+                    Log.e("Exception:", "FirebaseAuthInvalidCredentialsException " + e.message)
 
                 } else if (e is FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
@@ -183,7 +182,6 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
             show()
         }
     }
-
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

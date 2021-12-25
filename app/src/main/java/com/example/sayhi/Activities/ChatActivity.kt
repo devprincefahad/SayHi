@@ -102,12 +102,12 @@ class ChatActivity : AppCompatActivity() {
         }
         nameTv.text = name
 
-//        Glide.with(this)
-//            .load(image)
-//            .placeholder(R.drawable.defaultavatar)
-//            .into(userImgView)
+        Glide.with(this)
+            .load(image)
+            .placeholder(R.drawable.defaultavatar)
+            .into(userImgView)
 
-        Picasso.get().load(image).into(userImgView)
+//        Picasso.get().load(image).into(userImgView)
 
         val emojiPopup = EmojiPopup.Builder.fromRootView(rootView).build(msgEdtv)
         smileBtn.setOnClickListener {

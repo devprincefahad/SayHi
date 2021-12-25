@@ -34,16 +34,16 @@ class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             titleTv.text = item.name
             subTitleTv.text = item.msg
 
-//            Glide.with(context)
-//                .load(item.image)
-//                .placeholder(R.drawable.defaultavatar)
-//                .into(userImgView)
-
-            Picasso.get()
+            Glide.with(context)
                 .load(item.image)
                 .placeholder(R.drawable.defaultavatar)
-                .error(R.drawable.defaultavatar)
                 .into(userImgView)
+
+//            Picasso.get()
+//                .load(item.image!!)
+//                .placeholder(R.drawable.defaultavatar)
+//                .error(R.drawable.defaultavatar)
+//                .into(userImgView)
 
             setOnClickListener {
                 onClick.invoke(item.name!!, item.image!!, item.from!!)
